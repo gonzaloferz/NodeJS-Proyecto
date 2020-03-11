@@ -4,17 +4,47 @@
         <meta charset="UTMF-8">
         <title> Proyecto NodeJs </title>
         <link rel="stylesheet" href="">
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            table, th{
+                border: 1px solid red;
+                border-collapse: collapse;
+
+            }
+
+            th{
+                padding: 4px;
+            }
+
+            thead {
+                background-color: blue;
+                color: white;
+            }
+            th:nth-child(3) {
+                width: 200px;
+            }
+            tr:nth-child(odd){
+                background-color: lightgrey;
+            }
+
+        </style>
     </head>
     <body>
-        <table cellspacing=0 cellpadding="4px" border="1px solid blue"> 
+        <h1>Tablas</h1>
+        <table cellspacing=0 cellpadding="4px" > 
             <thead style="background-color: grey; color: white;"></thead>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Year</th>
+                    <th>Band</th>
+                    <th>Title</th>
+                    <th>Cover</th>
                 </tr>
             <tbody></tbody>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
