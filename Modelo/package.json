@@ -4,7 +4,7 @@
   "version": "4.2.0",
   "scripts": {
     "start": "node src",
-    "dev": "node src"
+    "dev": "nodemon src"
   },
   "description": "An HTML template with a hero heading and feature cards built with Bootstrap",
   "keywords": [
@@ -40,7 +40,8 @@
     "browser-sync": "2.26.7",
     "del": "^4.1.1",
     "gulp": "4.0.2",
-    "merge-stream": "2.0.0"
+    "merge-stream": "2.0.0",
+    "nodemon": "^2.0.4"
   },
   "main": "gulpfile.js"
 }
