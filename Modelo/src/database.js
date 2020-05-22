@@ -24,3 +24,6 @@ module.exports = mysqlConnection;
 //Para utilizar desde otro script
 //const mysqlConnection = require('../database');
 //Y un GET similar a cualquier otra peticion
+
+//Para hacer algun query desde el otro script
+//mysqlConnection.query('SELECT * FROM empleado', (err, rows, fields) => {..});
