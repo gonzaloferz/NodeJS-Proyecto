@@ -12,4 +12,14 @@ router.get('/contacto', (req, res) => {
 });
 
 
+router.get('/login', (req, res) => {
+    res.render('login.html');
+});
+
+
+router.get('/registro', (req, res) => {
+    res.render('registro.html');
+});
+
+
 module.exports = router;
