@@ -1,8 +1,18 @@
 const express = require('express');
 const app = express();
+//Para inicializar la base de datos Mongo DB
+const mongoose = require('mongoose');
+//Permite enlazar las rutas independientemente del SO
 const path = require('path');
 //const morgan = require('morgan');
 
+mongoose.Promise = global.Promise;
+//Inicializo la DB
+mongoose.connect('mongodb:://localhost/Tienda Videojuegos', {
+    /* useMongoClient: true */
+    useNewUrlParser: true 
+}).then( db => console.log('db is connected'))
+    .catch( err => console.log(err));
 
 //Settings
 //setea el puerto en la posicion indicada o donde el servicio de la nuve indique 
@@ -27,6 +37,7 @@ app.use(express.json());
 app.use(require('./routes/index'));
 app.use('/api/movies', require('./routes/movies'));
 app.use('/api/users', require('./routes/users'));
+app.use(require('./routes/usuarios'));
 
 
 //Static files

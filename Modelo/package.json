@@ -1,39 +1,20 @@
 {
-  "title": "Heroic Features",
+  "title": "Mi AppWeb",
   "name": "startbootstrap-heroic-features",
   "version": "4.2.0",
   "scripts": {
     "start": "node src",
     "dev": "nodemon src"
   },
-  "description": "An HTML template with a hero heading and feature cards built with Bootstrap",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template-overviews/heroic-features",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-heroic-features/issues",
-    "email": "feedback@startbootstrap.com"
-  },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BlackrockDigital/startbootstrap-heroic-features.git"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bootstrap": "4.3.1",
     "ejs": "^3.1.3",
     "express": "^4.17.1",
     "jquery": "3.4.1",
+    "mongoose": "^5.9.16",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "node-fetch": "^2.6.0",
