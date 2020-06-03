@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    Pais: "Argentina",
+    Pais: String,
     Nombre: String,
     Apellido: String,
     FechaDeNacimiento: String,

@@ -1,13 +1,13 @@
-const express = require('express');
+/* const express = require('express');
 const router = express.Router();
+ */
 
-/* const fetch = require('node-fetch'); */
+ const router = require('express-promise-router')();
 
-//Hago una peticion Get a otra api (Obtendo datos almacenados en otro lado)
-/* router.get('/', async (req, res) => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    const users = await response.json();
-    res.json(users);
-}); */
+const {
+    index
+} = require('../controllers/usuario');
+
+router.get('/', index);
 
 module.exports = router;

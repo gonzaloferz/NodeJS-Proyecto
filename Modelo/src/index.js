@@ -8,9 +8,10 @@ const path = require('path');
 
 mongoose.Promise = global.Promise;
 //Inicializo la DB
-mongoose.connect('mongodb:://localhost/Tienda Videojuegos', {
-    /* useMongoClient: true */
-    useNewUrlParser: true 
+mongoose.connect('mongodb://localhost/Tienda Videojuegos', {
+    /* useMongoClient: true, */
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 }).then( db => console.log('db is connected'))
     .catch( err => console.log(err));
 
