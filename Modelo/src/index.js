@@ -8,7 +8,7 @@ const path = require('path');
 
 mongoose.Promise = global.Promise;
 //Inicializo la DB
-mongoose.connect('mongodb://localhost/Tienda Videojuegos', {
+mongoose.connect('mongodb://localhost/TiendaVideojuegos', {
     /* useMongoClient: true, */
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/Tienda Videojuegos', {
 
 //Settings
 //setea el puerto en la posicion indicada o donde el servicio de la nuve indique 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile); 
 app.set('view engine', 'ejs');
