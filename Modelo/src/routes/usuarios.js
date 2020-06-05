@@ -6,9 +6,19 @@ const router = express.Router();
  const router = require('express-promise-router')();
 
 const {
-    index
+    obtenerUsuarios,
+    agregarUsuario,
+    obtenerUsuario,
+    reemplazarUsuario,
+    actualizarUsuario,
+    eliminarUsuario
 } = require('../controllers/usuario');
 
-router.get('/', index);
+router.get('/', obtenerUsuarios);
+router.post('/', agregarUsuario);
+router.get('/:idUsuario', obtenerUsuario);
+router.put('/:idUsuario', reemplazarUsuario);
+router.patch('/:idUsuario', actualizarUsuario);
+router.delete('/:idUsuario', eliminarUsuario);
 
 module.exports = router;

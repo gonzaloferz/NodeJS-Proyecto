@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/TiendaVideojuegos', {
 
 //Settings
 //setea el puerto en la posicion indicada o donde el servicio de la nuve indique 
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile); 
 app.set('view engine', 'ejs');
@@ -38,7 +38,7 @@ app.use(express.json());
 app.use(require('./routes/index'));
 app.use('/api/movies', require('./routes/movies'));
 app.use('/api/users', require('./routes/users'));
-app.use(require('./routes/usuarios'));
+app.use('/usuarios', require('./routes/usuarios'));
 
 
 //Static files
