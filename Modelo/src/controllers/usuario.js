@@ -1,4 +1,5 @@
 const Usuario = require('../models/usuario');
+const Juegos = require('../models/videojuego');
 
 module.exports = {
  
@@ -47,8 +48,25 @@ module.exports = {
         const { idUsuario }= req.params;
         const usuario = await Usuario.findByIdAndRemove(idUsuario);
         res.status(200).json({Success: true});
-    }
+    },
 
+    obtenerJuegosUsuario: async (req, res, next) => {
+        const { idUsuario }= req.params;
+        const usuario = await Usuario.findById(idUsuario);
+        res.status(200).json(usuario);
+    },
+
+    agregarJuegoUsuario: async( req, res, next) => {
+        const { idUsuario }= req.params;
+        const nuevoJuego = new Juegos(req.body);
+        const usuario = await Usuario.findById(idUsuario);
+        nuevoJuego.Compradores = usuario;
+        await nuevoJuego.save();
+        usuario.Juegos.push(nuevoJuego);
+        await usuario.save();
+        res.status(200).json(usuario);
+    }
+ 
 };
 
 //El next se utiliza para enviar el error si se quisiera

@@ -11,7 +11,9 @@ const {
     obtenerUsuario,
     reemplazarUsuario,
     actualizarUsuario,
-    eliminarUsuario
+    eliminarUsuario,
+    obtenerJuegosUsuario,
+    agregarJuegoUsuario
 } = require('../controllers/usuario');
 
 router.get('/', obtenerUsuarios);
@@ -20,5 +22,8 @@ router.get('/:idUsuario', obtenerUsuario);
 router.put('/:idUsuario', reemplazarUsuario);
 router.patch('/:idUsuario', actualizarUsuario);
 router.delete('/:idUsuario', eliminarUsuario);
+
+router.get('/:idUsuario/juegos', obtenerJuegosUsuario);
+router.post('/:idUsuario/juegos', agregarJuegoUsuario);
 
 module.exports = router;
