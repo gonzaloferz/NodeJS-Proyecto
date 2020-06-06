@@ -37,6 +37,7 @@ app.use(express.json());
 
 //Routes
 app.use(require('./routes/index'));
+app.use('/registro', require('./routes/registro'));
 app.use('/usuarios', require('./routes/usuarios'));
 app.use('/admin', require('./routes/tienda'));
 
