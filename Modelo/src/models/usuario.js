@@ -6,13 +6,16 @@ const usuarioSchema = new Schema({
     Nombre: String,
     Apellido: String,
     FechaDeNacimiento: String,
-    Email: String,
-    Contraseña: String,
+    /* Imagen: String, */
+    Email: { type: String, unique: true, lowercase: true },
+    Contraseña: { type: String, select: false },
+    FechaDeRegistro: { type: Date, default: Date.now() },
     Juegos: [{
         type: Schema.Types.ObjectId,
         ref: 'videojuego'
     }]
 });
+
 
 module.exports = mongoose.model('usuario', usuarioSchema);
 
