@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/TiendaVideojuegos', {
     /* useMongoClient: true, */
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then( db => console.log('db is connected'))
+}).then( db => console.log('La base de datos esta conectada...'))
     .catch( err => console.log(err));
 
 //Settings
@@ -36,8 +36,6 @@ app.use(express.json());
 
 //Routes
 app.use(require('./routes/index'));
-app.use('/api/movies', require('./routes/movies'));
-app.use('/api/users', require('./routes/users'));
 app.use('/usuarios', require('./routes/usuarios'));
 
 
@@ -47,5 +45,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Listening the server
 app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'));
+    console.log('Servidor escuchando en el puerto', app.get('port'));
 });

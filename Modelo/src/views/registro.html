@@ -21,81 +21,96 @@
 
     <div class="container p-5">
 
-      <form>
-        <div class="form-group">
-          <label for="inputPais"></label>
-          <select id="inputPais" class="form-control" required>
-            <option>Argentina</option>
-            <option>Brasil</option>
-            <option>Uruguay</option>
-            <option>Chile</option>
-            <option>Colombia</option>
-          </select>
+      <div class="row text-center">
+
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <card-body>
+              <form action="">
+                <div class="form-group">
+                  <label for="inputPais"></label>
+                  <select id="inputPais" class="form-control" required>
+                    <option>Argentina</option>
+                    <option>Brasil</option>
+                    <option>Uruguay</option>
+                    <option>Chile</option>
+                    <option>Colombia</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label for="validationServer01"></label>
+                    <input type="text" class="form-control" id="validationServer01" placeholder="Nombre" required>
+                  </div>
+                  <div class="col">
+                    <label for="validationServer02"></label>
+                    <input type="text" class="form-control" id="validationServer02" placeholder="Apellido" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label for="validationServer03"></label>
+                    <input type="text" class="form-control" id="validationServer03" placeholder="Dia de nacimiento"
+                      required>
+                  </div>
+                  <div class="form-group col">
+                    <label for="inputMes"></label>
+                    <select id="inputMes" class="form-control" required>
+                      <option>Enero</option>
+                      <option>Febrero</option>
+                      <option>Marzo</option>
+                      <option>Abril</option>
+                      <option>Mayo</option>
+                      <option>Junio</option>
+                      <option>Julio</option>
+                      <option>Agosto</option>
+                      <option>Septiembre</option>
+                      <option>Octubre</option>
+                      <option>Noviembre</option>
+                      <option>Diciembre</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="validationServer04"></label>
+                    <input type="text" class="form-control" id="validationServer04" placeholder="Año de nacimiento"
+                      required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label for="validationServer05"></label>
+                    <input type="text" class="form-control" id="validationServer05" placeholder="Email" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label for="validationServer06"></label>
+                    <input type="password" class="form-control" id="validationServer06" placeholder="Contraseña"
+                      required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+                    <label class="form-check-label" for="invalidCheck3">
+                      Acepto terminos y condiciones.
+                    </label>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="btn btn-primary">Registrar</a>
+                </div>
+              </form>
+            </card-body>
+          </div>
         </div>
 
-        <div class="form-row">
-          <div class="col">
-            <label for="validationServer01"></label>
-            <input type="text" class="form-control" id="validationServer01" placeholder="Nombre" required>
-          </div>
-          <div class="col">
-            <label for="validationServer02"></label>
-            <input type="text" class="form-control" id="validationServer02" placeholder="Apellido" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
-            <label for="validationServer03"></label>
-            <input type="text" class="form-control" id="validationServer03" placeholder="Dia de nacimiento" required>
-          </div>
-          <div class="form-group col">
-            <label for="inputMes"></label>
-            <select id="inputMes" class="form-control" required>
-              <option>Enero</option>
-              <option>Febrero</option>
-              <option>Marzo</option>
-              <option>Abril</option>
-              <option>Mayo</option>
-              <option>Junio</option>
-              <option>Julio</option>
-              <option>Agosto</option>
-              <option>Septiembre</option>
-              <option>Octubre</option>
-              <option>Noviembre</option>
-              <option>Diciembre</option>
-            </select>
-          </div>
-          <div class="col">
-            <label for="validationServer04"></label>
-            <input type="text" class="form-control" id="validationServer04" placeholder="Año de nacimiento" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
-            <label for="validationServer05"></label>
-            <input type="text" class="form-control" id="validationServer05" placeholder="Email" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
-            <label for="validationServer06"></label>
-            <input type="password" class="form-control" id="validationServer06" placeholder="Contraseña" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
-            <label class="form-check-label" for="invalidCheck3">
-              Acepto terminos y condiciones.
-            </label>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Submit form</button>
-      </form>
+      </div>
 
     </div>
 

@@ -12,7 +12,7 @@ const juegoSchema = new Schema({
     Compradores: [{
         type: Schema.Types.ObjectId,
         ref: 'usuario'
-    }]
+    }]  
 });
 
 
