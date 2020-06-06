@@ -11,7 +11,8 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/TiendaVideojuegos', {
     /* useMongoClient: true, */
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 }).then( db => console.log('La base de datos esta conectada...'))
     .catch( err => console.log(err));
 
