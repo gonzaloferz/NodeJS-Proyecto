@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 //Validar registro
-router.post('/', (req, res) => {
+/* router.post('/', (req, res) => {
     const { pais, nombre, apellido, dia, mes, año, email, contraseña } = req.body;
 
     if ( typeof nombre  !== 'string'){
@@ -22,6 +22,6 @@ router.post('/', (req, res) => {
         throw new Error('Tipo invalido')
     }
     
-})
+}) */
 
 module.exports = router;
