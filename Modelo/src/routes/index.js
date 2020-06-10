@@ -7,11 +7,6 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/contacto', (req, res) => {
-    res.render('contacto.html');
-});
-
-
 router.get('/login', (req, res) => {
     res.render('login.html');
 });
