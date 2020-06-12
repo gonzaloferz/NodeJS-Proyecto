@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 //Permite enlazar las rutas independientemente del SO
 const path = require('path');
 //const morgan = require('morgan');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 mongoose.Promise = global.Promise;
 //Inicializo la DB
@@ -33,6 +35,20 @@ app.set('json spaces', 2);
 app.use(express.urlencoded({extended: false}));
 //Permite al servidor entender los formatos Json
 app.use(express.json());
+app.use(session({
+    secret: 'mysecretapp',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(flash()); 
+
+//Global Variables
+app.use((req,res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+
+    next();
+});
 
 
 //Routes
