@@ -21,12 +21,15 @@
 
     <div class="container p-5">
 
+      <%- include ('partials/alert-success.html') %>
+      <%- include ('partials/alert-error.html') %>
+
       <div class="row text-center">
 
         <div class="col-md-6 offset-md-3">
           <div class="card">
             <!-- <div class="card-body"> -->
-            <form action="">
+            <form action="/login" method="POST">
               <div class="container">
                 <div class="form-row mt-4 mb-4">
                   <div class="col">
@@ -42,7 +45,7 @@
                 </div>
               </div>
               <div class="card-footer mt-4">
-                <a href="#" class="btn btn-primary">Ingresar</a>
+                <button class="btn btn-primary" type="submit">Ingresar</button>
               </div>
             </form>
             <!-- </div> -->

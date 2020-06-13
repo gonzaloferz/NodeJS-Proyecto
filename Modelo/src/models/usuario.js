@@ -6,9 +6,8 @@ const usuarioSchema = new Schema({
     Nombre: String,
     Apellido: String,
     FechaDeNacimiento: String,
-    /* Imagen: String, */
     Email: { type: String, unique: true, lowercase: true },
-    Contraseña: { type: String, select: false },
+    Contraseña: { type: String },
     FechaDeRegistro: { type: Date, default: Date.now() },
     Juegos: [{
         type: Schema.Types.ObjectId,

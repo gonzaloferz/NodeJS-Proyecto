@@ -3,7 +3,6 @@ const router = express.Router();
 
 const Usuario = require('../models/usuario'); 
 
-
 function validarMes(mes){
 
     let anioNumero;
@@ -99,13 +98,15 @@ router.post('/', async (req, res) => {
 
         const fechaDeNacimiento = dia+"/"+validarMes(mes)+"/"+anio;
 
-        const nuevoUsuario = new Usuario({pais, nombre, apellido, fechaDeNacimiento, email, contrasenia});
+        const nuevoUsuario = new Usuario({Pais: pais, Nombre: nombre, Apellido: apellido, FechaDeNacimiento: fechaDeNacimiento, Email: email, Contraseña: contrasenia});
+        
         await nuevoUsuario.save();
-        req.flash('sucess_msg', 'Usuario registrado con exito!')
-        res.redirect('index.html');
+
+        req.flash('success_msg', 'Usuario registrado con exito!');
+        res.redirect('/mensajes');
+
     }
     
-
 });
 
 module.exports = router;

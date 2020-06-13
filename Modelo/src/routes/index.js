@@ -17,4 +17,14 @@ router.get('/registro', (req, res) => {
 });
 
 
+router.get('/mensajes', (req, res) => {
+    console.log(req.session.usuario);
+    res.render('mensajes.html');
+
+});
+
+router.get('/perfil', (req, res) => {
+    //res.render('perfil.html');
+});
+
 module.exports = router;
