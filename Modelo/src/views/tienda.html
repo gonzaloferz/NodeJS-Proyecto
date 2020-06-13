@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+
+    <!-- Estilos -->
+    <%- include ('partials/head.html') %>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include ('partials/header.html') %>
+
+    <!-- Contenido pagina -->
+    <main class="main-alto-min">
+
+        <!-- Page Content -->
+        <div class="container p-5">
+
+            <h1 class="my-6">Tienda</h1>
+            <div class="row">
+
+                <div class="col-lg-3">
+
+                    <!-- Search Widget -->
+                    <div class="input-group my-4">
+                        <form action="/tienda" method="POST">
+                            <input type="text" class="form-control" placeholder="Buscar" name="busqueda">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="submit"><svg class="bi bi-search" width="1em"
+                                        height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                                        <path fill-rule="evenodd"
+                                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                    </svg>
+                                </button>
+                            </span>
+                        </form>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Plataformas</h5>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <ul>
+                                    <li>
+                                        <a href="#">PS4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">XBOX ONE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PC</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Generos</h5>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <ul>
+                                    <li>
+                                        <a href="/tienda/Accion">Accion</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tienda/Aventura">Aventura</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tienda/Deportes">Deportes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <!-- <div class="card my-4">
+                        <h5 class="card-header">Mas Vendidos</h5>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <ul>
+                                    <li>
+                                        <a href="#">PS4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">XBOX ONE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PC</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                </div>
+                <!-- /.col-lg-3 -->
+
+                <div class="col-lg-9">
+
+                    <%- include ('partials/alert-error.html') %>
+
+                    <div class="row">
+
+                        <%- include ('partials/visualizar-juegos.html') %>
+
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.col-lg-9 -->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+
+    </main>
+    <!-- /.Contenido pagina -->
+
+    <!-- Footer (Incluye JS)-->
+    <%- include ('partials/footer.html') %>
+
+</body>
+
+</html>

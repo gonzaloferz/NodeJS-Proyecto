@@ -47,6 +47,8 @@ app.use((req,res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
 
+    res.locals.usuarioLogueado = req.flash('usuario');
+
     next();
 });
 
@@ -56,7 +58,7 @@ app.use(require('./routes/index'));
 app.use('/registro', require('./routes/registro'));
 app.use('/login', require('./routes/login'));
 app.use('/usuarios', require('./routes/usuarios'));
-app.use('/admin', require('./routes/tienda'));
+app.use('/tienda', require('./routes/tienda'));
 
 
 //Static files

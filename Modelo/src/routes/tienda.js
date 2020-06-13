@@ -11,12 +11,16 @@ const {
     obtenerJuego,
     actualizarJuego,
     eliminarJuego,
+    buscarJuegos,
+    plataformaJuegos,
 } = require('../controllers/tienda');
 
 router.get('/', obtenerJuegos);
-router.post('/', agregarJuego);
+//router.post('/', agregarJuego);
 router.get('/:idJuego', obtenerJuego);
 router.patch('/:idJuego', actualizarJuego);
 router.delete('/:idJuego', eliminarJuego);
+router.post('/', buscarJuegos);
+router.get('/:plataforma', plataformaJuegos);
 
 module.exports = router;

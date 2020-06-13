@@ -19,8 +19,16 @@
   <!-- Contenido pagina -->
   <main class="main-alto-min">
 
-    <%- include ('partials/alert-success.html') %>
-    <%- include ('partials/alert-error.html') %>
+    <div class="container p-5">
+
+      <%- include ('partials/alert-success.html') %>
+      <%- include ('partials/alert-error.html') %>
+
+<!--       <% if (usuarioLogueado) { %>
+      <%= usuarioLogueado.Nombre %>
+      <% } %> -->
+
+    </div>
 
   </main>
   <!-- /.Contenido pagina -->

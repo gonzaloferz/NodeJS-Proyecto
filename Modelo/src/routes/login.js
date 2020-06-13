@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
         res.render('login.html', {errors, email, contrasenia});
     } else {
 
-        req.session.usuario = usuario;
+        //req.flash('usuario', usuario);
         
         req.flash('success_msg', 'Usuario logueado con exito!');
         res.redirect('/mensajes');
