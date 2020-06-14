@@ -44,37 +44,44 @@ module.exports = {
     //BUSQUEDA
     buscarJuegos: async (req, res, next) => {
         const { busqueda }= req.body;
-        const idJuegos = await Tienda.find({ $or: [{"Nombre": {$regex:".*"+busqueda+"", $options:"i"}},
-        {"Plataforma": {$regex:".*"+busqueda+"", $options:"i"}},
-        {"Genero": {$regex:".*"+busqueda+"", $options:"i"}},
-        {"Desarrollador": {$regex:".*"+busqueda+"", $options:"i"}},]},{name:1});
 
-        const juegos = [];
-        const errors = [];
-
-        for (var i=0; i < idJuegos.length; i++){
-            juegos.push(await Tienda.findById(idJuegos));
-        }
-        
-        if (juegos.length == 0) {
-            
-            errors.push({text: 'No se encontraron resultados'}); 
-            res.render('tienda.html', {errors});
-        } else {
+        if (busqueda == '') {
+            const juegos = await Tienda.find({});
             res.render('tienda.html',{juegos});
+        } else {
+            const idJuegos = await Tienda.find({ $or: [{"Nombre": {$regex:".*"+busqueda+"", $options:"i"}},
+            {"Plataforma": {$regex:".*"+busqueda+"", $options:"i"}},
+            {"Genero": {$regex:".*"+busqueda+"", $options:"i"}},
+            {"Desarrollador": {$regex:".*"+busqueda+"", $options:"i"}},]},{name:1});
+    
+            const juegos = [];
+            const errors = [];
+    
+            for (var i=0; i < idJuegos.length; i++){
+                juegos.push(await Tienda.findById(idJuegos));
+            }
+    
+            if (juegos.length == 0) { 
+                errors.push({text: 'No se encontraron resultados'}); 
+                res.render('tienda.html', {errors});
+            } else {
+                res.render('tienda.html',{juegos});
+            }
         }
     },
 
-    plataformaJuegos: async (req, res, next) => {
-        const { plataforma }= req.params;
-        const juegos = await Tienda.find({Plataforma: plataforma});
+    filtrarJuegos: async (req, res, next) => {
+        const { plataforma }= req.query;
+        //const juegos = await Tienda.find({Plataforma: plataforma});
 
-        if (!juegos) {
+        console.log(plataforma);
+
+/*         if (!juegos) {
             req.flash('error_msg', 'No se encontraron resultados');
             res.render('tienda.html');
         } else {
             res.render('tienda.html',{juegos});
-        }
+        } */
     },
  
 };

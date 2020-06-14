@@ -7,12 +7,12 @@ const router = express.Router();
 
 const {
     obtenerJuegos,
-    agregarJuego,
+    //agregarJuego,
     obtenerJuego,
     actualizarJuego,
     eliminarJuego,
     buscarJuegos,
-    plataformaJuegos,
+    filtrarJuegos,
 } = require('../controllers/tienda');
 
 router.get('/', obtenerJuegos);
@@ -21,6 +21,6 @@ router.get('/:idJuego', obtenerJuego);
 router.patch('/:idJuego', actualizarJuego);
 router.delete('/:idJuego', eliminarJuego);
 router.post('/', buscarJuegos);
-router.get('/:plataforma', plataformaJuegos);
+router.get('/:filtro', filtrarJuegos);
 
 module.exports = router;
