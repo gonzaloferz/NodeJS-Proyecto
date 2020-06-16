@@ -5,7 +5,6 @@ Previa a toda configuracion dentro del proyecto asegurece de tener instalado alg
 Bueno luego de tener todo instalado, descargar el proyecto de Github y cargar la carpeta dentro de VSC.
 
 Luego para inicializar el proyecto ejecute una nueva terminal dentro VSC e ingrese:
-npm install 
 npm init
 
 Eso se encarga de levantar el package.json e instalar todas las dependencias necesarias para el el codigo funcione sin problemas.
