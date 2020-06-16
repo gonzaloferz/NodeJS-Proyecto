@@ -8,7 +8,7 @@ const juegoSchema = new Schema({
     Año: String,
     Desarrollador: String,
     Vendidos: { type: Number, default: 0 },
-    /* Imagen: String, */
+    Imagen: String,
     /* Disponibilidad: Boolean, */
     /* Precio: Number, */
     /* Oferta: Boolean, */

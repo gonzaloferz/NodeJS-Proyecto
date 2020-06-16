@@ -1,6 +1,8 @@
 const Tienda= require('../models/videojuego');
 const Juego = require('../models/videojuego');
 
+const path = require('path');
+
 module.exports = {
  
     //GET: Obtenemos todos los juegos
@@ -79,6 +81,8 @@ module.exports = {
         } else if (categoria == "plataforma") {
             juegos = await Tienda.find({"Plataforma": {$regex: filtro, $options:"i"}});
         }
+
+        console.log(__dirname);
 
         if (juegos.length == 0) {
             req.flash('error_msg', 'No se encontraron resultados');
