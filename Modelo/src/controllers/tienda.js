@@ -60,9 +60,9 @@ module.exports = {
             const errors = [];
     
             for (var i=0; i < idJuegos.length; i++){
-                juegos.push(await Tienda.findById(idJuegos));
+                juegos.push(await Tienda.findById(idJuegos[i]));
             }
-    
+
             if (juegos.length == 0) { 
                 errors.push({text: 'No se encontraron resultados'}); 
                 res.render('tienda.html', {errors});
