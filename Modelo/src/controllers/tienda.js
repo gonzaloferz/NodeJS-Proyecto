@@ -23,7 +23,8 @@ module.exports = {
     obtenerJuego: async (req, res, next) => {
         const { idJuego }= req.params;
         const juego = await Tienda.findById(idJuego);
-        res.status(200).json(juego);
+        //res.status(200).json(juego);
+        res.render('juego.html', {juego});
     },
 
     //PATCH: Actualizamos un campo de un juego a traves de su ID 

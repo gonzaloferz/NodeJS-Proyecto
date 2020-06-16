@@ -25,7 +25,7 @@ module.exports = {
         res.render('datos.html', {usuario});
     },
 
-    //PUT: Reemplazamos todos los campos de usuario por los campos de otro usuario
+/*     //PUT: Reemplazamos todos los campos de usuario por los campos de otro usuario
     reemplazarUsuario: async (req, res, next) => {
         const { idUsuario }= req.params;
         const nuevoUsuario = req.body;
@@ -50,7 +50,7 @@ module.exports = {
         const { idUsuario }= req.params;
         const usuario = await Usuario.findByIdAndRemove(idUsuario);
         res.status(200).json({Success: true});
-    },
+    }, */
 
     obtenerJuegosUsuario: async (req, res, next) => {
         const idUsuario = req.params.idUsuario;
@@ -72,17 +72,23 @@ module.exports = {
     },
 
     agregarJuegoUsuario: async( req, res, next) => {
-        const { idUsuario }= req.params;
-        const nuevoJuego = new Juegos(req.body);
+        const idUsuario= req.params.idUsuario;
+        const idJuego= req.params.idJuego;
+        //const nuevoJuego = new Juegos(req.body);
         const usuario = await Usuario.findById(idUsuario);
-        nuevoJuego.Compradores = usuario;
-        await nuevoJuego.save();
-        usuario.Juegos.push(nuevoJuego);
+        const juego = await Juegos.findById(idJuego);
+        //nuevoJuego.Compradores = usuario;
+        //await nuevoJuego.save();
+        usuario.Juegos.push(juego);
         await usuario.save();
-        res.status(200).json(usuario);
+        juego.Vendidos = juego.Vendidos + 1;
+        await juego.save(); 
+        req.flash('success_msg', 'Juego adquirido con exito!');
+        res.redirect('/mensajes');
+        //res.status(200).json(usuario);
     },
 
-/*     //GET: Obtenemos un usuario a traves de su ID
+/*     
     obtenerUsuarioPorEmail: async (req, res, next) => {
         const emailUsuario= req.params.email;
 

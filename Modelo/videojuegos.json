@@ -1,0 +1,132 @@
+[
+    {
+        "Nombre": "FIFA 2020",
+        "Plataforma": "PS4",
+        "Genero": "Deportes",
+        "Año": "2019",
+        "Desarrollador": "Electronic Arts",
+        "Precio": 6200,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-936910.jpg"
+    },
+    
+    {
+        "Nombre": "FIFA 2020",
+        "Plataforma": "XBOX ONE",
+        "Genero": "Deportes",
+        "Año": "2020",
+        "Desarrollador": "Electronic Arts",
+        "Precio": 7300,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-936910.jpg"
+    },
+
+    {
+        "Nombre": "Pro Evolution Soccer 2020",
+        "Plataforma": "PS4",
+        "Genero": "Deportes",
+        "Año": "2019",
+        "Desarrollador": "Ubisoft",
+        "Precio": 4100,
+        "Imagen":"https://www.cdmarket.com.ar/image/0/600_750-pes.jpg"
+    },
+    
+    {
+        "Nombre": "Pro Evolution Soccer 2020",
+        "Plataforma": "XBOX ONE",
+        "Genero": "Deportes",
+        "Año": "2020",
+        "Desarrollador": "Ubisoft",
+        "Precio": 4500,
+        "Imagen":"https://www.cdmarket.com.ar/image/0/600_750-cover%20xbox1.jpg"
+    },
+
+    {
+        "Nombre": "TONY HAWKS PRO Skater 1 y 2",
+        "Plataforma": "PS4",
+        "Genero": "Deportes",
+        "Año": "2020",
+        "Desarrollador": "Activision",
+        "Precio": 6000,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-PS4_ACT_88473.jpg"
+    },
+
+    {
+        "Nombre": "TONY HAWKS PRO Skater 1 y 2",
+        "Plataforma": "XBOX ONE",
+        "Genero": "Deportes",
+        "Año": "2020",
+        "Desarrollador": "Activision",
+        "Precio": 6000,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-XB1_ACT_88477.jpg"
+    },
+
+    {
+        "Nombre": "Captain Tsubasa: Rise of New Champions",
+        "Plataforma": "XBOX ONE",
+        "Genero": "Deportes",
+        "Año": "2020",
+        "Desarrollador": "Bandai Namco",
+        "Precio": 7500,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-cps4.jpg"
+    },
+
+    {
+        "Nombre": "Grand Theft Auto V",
+        "Plataforma": "PS4",
+        "Genero": "Accion",
+        "Año": "2014",
+        "Desarrollador": "Rockstar Games",
+        "Precio": 3200,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-936957%20Grand%20Theft%20Auto%20V%20Premium%20Edition1.jpg"
+    },
+
+    {
+        "Nombre": "Grand Theft Auto V",
+        "Plataforma": "PC",
+        "Genero": "Accion",
+        "Año": "2014",
+        "Precio": 3000,
+        "Desarrollador": "Rockstar Games",
+        "Imagen":"https://xombitgames.com/files/2013/05/pc.jpg"
+    },
+
+    {
+        "Nombre":"Hitman 2 Gold Edition",
+        "Plataforma":"PS4",
+        "Genero":"Accion",
+        "Año":"2018",
+        "Desarrollador": "Warner Bros",
+        "Precio": 7500,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/400_400-937033_1.jpg"
+    },
+
+    {
+        "Nombre":"Call of Duty: Modern Warfare",
+        "Plataforma":"XBOX ONE",
+        "Genero":"Accion",
+        "Año":"2020",
+        "Desarrollador": "Infinity Ward",
+        "Precio": 5500,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-943365_xbox01.jpg"
+    },
+
+    {
+        "Nombre":"Resident Evil 3",
+        "Plataforma":"PS4",
+        "Genero":"Accion",
+        "Año":"2020",
+        "Desarrollador": "Capcom",
+        "Precio": 7000,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-PS4_CAP_56064.jpg"
+    },
+
+    {
+        "Nombre":"Assassin's Creed Valhalla",
+        "Plataforma":"PS4",
+        "Genero":"Accion",
+        "Año":"2020",
+        "Desarrollador": "Ubisoft",
+        "Precio": 7500,
+        "Imagen":"https://www.cdmarket.com.ar/Image/0/600_750-ACK_UCS16407_PS4_BXSHT2D_US_resize.jpg"
+    }
+
+]
