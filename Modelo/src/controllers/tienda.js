@@ -82,8 +82,6 @@ module.exports = {
             juegos = await Tienda.find({"Plataforma": {$regex: filtro, $options:"i"}});
         }
 
-        console.log(__dirname);
-
         if (juegos.length == 0) {
             req.flash('error_msg', 'No se encontraron resultados');
             res.render('tienda.html');
