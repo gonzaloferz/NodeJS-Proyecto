@@ -8,24 +8,24 @@ const router = express.Router();
 const {
     obtenerUsuarios,
     agregarUsuario,
-    //obtenerUsuario,
+    obtenerUsuario,
     reemplazarUsuario,
     actualizarUsuario,
     eliminarUsuario,
     obtenerJuegosUsuario,
     agregarJuegoUsuario,
-    obtenerUsuarioPorEmail
+    //obtenerUsuarioPorEmail
 } = require('../controllers/usuario');
 
 router.get('/', obtenerUsuarios);
 router.post('/', agregarUsuario);
-//router.get('/:idUsuario', obtenerUsuario);
+router.get('/:idUsuario', obtenerUsuario);
 router.put('/:idUsuario', reemplazarUsuario);
 router.patch('/:idUsuario', actualizarUsuario);
 router.delete('/:idUsuario', eliminarUsuario);
 
 router.get('/:idUsuario/juegos', obtenerJuegosUsuario);
 router.post('/:idUsuario/juegos', agregarJuegoUsuario);
-router.get('/:email', obtenerUsuarioPorEmail);
+//router.get('/:email', obtenerUsuarioPorEmail);
 
 module.exports = router;

@@ -18,9 +18,11 @@ module.exports = {
 
     //GET: Obtenemos un usuario a traves de su ID
     obtenerUsuario: async (req, res, next) => {
-        const { idUsuario }= req.params;
+        const idUsuario = req.params.idUsuario;
         const usuario = await Usuario.findById(idUsuario);
-        res.status(200).json(usuario);
+
+        //res.status(200).json(usuario);
+        res.render('datos.html', {usuario});
     },
 
     //PUT: Reemplazamos todos los campos de usuario por los campos de otro usuario
@@ -51,14 +53,19 @@ module.exports = {
     },
 
     obtenerJuegosUsuario: async (req, res, next) => {
-        const { idUsuario }= req.params;
+        const idUsuario = req.params.idUsuario;
         const usuario = await Usuario.findById(idUsuario);
         //res.status(200).json(usuario.Juegos);
-        const juegos = usuario.Juegos;
+        const idJuegos = usuario.Juegos;
+        let juegos = []
+        for (var i=0; i<idJuegos.length; i++){
+            juegos.push(await Juegos.findById(idJuegos[i]));
+        }
+        const errors = [];
 
         if (juegos.length == 0) {
-            req.flash('error_msg', 'No se encontraron resultados');
-            res.render('datos.html', {usuario});
+            errors.push({text: 'No se encontraron resultados'}); 
+            res.render('datos.html', {errors, usuario});
         } else {
             res.render('datos.html', {usuario, juegos});
         }
@@ -75,7 +82,7 @@ module.exports = {
         res.status(200).json(usuario);
     },
 
-    //GET: Obtenemos un usuario a traves de su ID
+/*     //GET: Obtenemos un usuario a traves de su ID
     obtenerUsuarioPorEmail: async (req, res, next) => {
         const emailUsuario= req.params.email;
 
@@ -83,7 +90,7 @@ module.exports = {
         //res.status(200).json(usuario);
 
         res.render('datos.html', {usuario});
-    },
+    }, */
 
 };
 

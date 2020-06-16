@@ -75,6 +75,7 @@ module.exports = {
         const categoria = req.params.categoria;
         const filtro = req.params.filtro;
         let juegos = [];
+        const errors = [];
 
         if (categoria == "genero") {
             juegos = await Tienda.find({"Genero": {$regex: filtro, $options:"i"}});
@@ -83,8 +84,8 @@ module.exports = {
         }
 
         if (juegos.length == 0) {
-            req.flash('error_msg', 'No se encontraron resultados');
-            res.render('tienda.html');
+            errors.push({text: 'No se encontraron resultados'}); 
+            res.render('tienda.html', {errors});
         } else {
             res.render('tienda.html', {juegos});
         }

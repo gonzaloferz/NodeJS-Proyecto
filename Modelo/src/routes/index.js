@@ -20,7 +20,7 @@ router.get('/login', (req, res) => {
 
 router.get('/logout', (req, res) => {
     req.flash('success_msg', 'Se cerro la sesion con exito!');
-    delete req.session.email;
+    delete req.session.usuario;
     res.redirect('/mensajes');
 });
 
