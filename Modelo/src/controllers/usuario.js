@@ -53,7 +53,15 @@ module.exports = {
     obtenerJuegosUsuario: async (req, res, next) => {
         const { idUsuario }= req.params;
         const usuario = await Usuario.findById(idUsuario);
-        res.status(200).json(usuario);
+        //res.status(200).json(usuario.Juegos);
+        const juegos = usuario.Juegos;
+
+        if (juegos.length == 0) {
+            req.flash('error_msg', 'No se encontraron resultados');
+            res.render('datos.html', {usuario});
+        } else {
+            res.render('datos.html', {usuario, juegos});
+        }
     },
 
     agregarJuegoUsuario: async( req, res, next) => {
@@ -65,8 +73,18 @@ module.exports = {
         usuario.Juegos.push(nuevoJuego);
         await usuario.save();
         res.status(200).json(usuario);
-    }
- 
+    },
+
+    //GET: Obtenemos un usuario a traves de su ID
+    obtenerUsuarioPorEmail: async (req, res, next) => {
+        const emailUsuario= req.params.email;
+
+        const usuario = await Usuario.findOne({Email: emailUsuario});
+        //res.status(200).json(usuario);
+
+        res.render('datos.html', {usuario});
+    },
+
 };
 
 //El next se utiliza para enviar el error si se quisiera

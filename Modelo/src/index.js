@@ -38,7 +38,7 @@ app.use(express.json());
 app.use(session({
     secret: 'mysecretapp',
     resave: true,   
-    saveUninitialized: true //La sesion es un objeto. Con esto almacenamos en la base de datos el objeto vacio
+    saveUninitialized: false //La sesion es un objeto. Con esto almacenamos en la base de datos el objeto vacio
 }));
 app.use(flash()); 
 
@@ -47,7 +47,7 @@ app.use((req,res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
 
-    res.locals.usuarioLogueado = req.flash('usuario');
+    res.locals.usuarioLogueado = req.session.email || "";
 
     next();
 });
@@ -57,7 +57,7 @@ app.use((req,res, next) => {
 app.use(require('./routes/index'));
 app.use('/registro', require('./routes/registro'));
 app.use('/login', require('./routes/login'));
-app.use('/usuarios', require('./routes/usuarios'));
+app.use('/usuario', require('./routes/usuarios'));
 app.use('/tienda', require('./routes/tienda'));
 
 

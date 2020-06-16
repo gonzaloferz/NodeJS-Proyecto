@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda</title>
+
+  <!-- Estilos -->
+  <%- include ('partials/head.html') %>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <%- include ('partials/header.html') %>
+
+  <!-- Contenido pagina -->
+  <main class="main-alto-min">
+
+    <!-- Page Content -->
+    <div class="container p-5">
+
+      <% if (typeof usuario != "undefined") { %>
+
+      <div class="row">
+
+        <div class="col-lg-4">
+
+          <div class="card">
+            <div class="card-header bg-dark text-white text-center">
+              <h3>Mis datos</h3>
+            </div>
+            <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+            <div class="card-body">
+              <h4 class="card-title"><%= usuario.Nombre + " " + usuario.Apellido %></h4>
+              <p class="card-text"><ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  Nacionalidad: <%= usuario.Pais %>
+                </li>
+                <li class="nav-item">
+                  Fecha de Nacimiento: <%= usuario.FechaDeNacimiento %>
+                </li>
+                <li class="nav-item">
+                  Email: <%= usuario.Email %>
+                </li>
+              </ul></p>
+            </div>
+            <div class="card-footer">
+              <a href="/usuario/<%=usuario.id%>/juegos" class="btn btn-primary">Mis Juegos!</a>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-8">
+
+          <div class="row">
+
+            <%- include ('partials/visualizar-juegos.html') %>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-8 -->
+
+      </div>
+      <!-- /.row -->
+
+      <% } %>
+
+    </div>
+    <!-- /.container -->
+
+
+  </main>
+  <!-- /.Contenido pagina -->
+
+  <!-- Footer (Incluye JS)-->
+  <%- include ('partials/footer.html') %>
+
+</body>
+
+</html>

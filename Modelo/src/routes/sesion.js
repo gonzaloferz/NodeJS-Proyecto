@@ -1,3 +1,9 @@
+/* const passport = require('passport');
+
+const usuario = require('../models.usuario');
+
+
+
 const express = require('express');
 const router = express.Router();
 
@@ -195,4 +201,4 @@ app.listen(HTTP_PORT, () => {
 });
 
 
-module.exports = router;
+module.exports = router; */

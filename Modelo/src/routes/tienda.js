@@ -21,6 +21,6 @@ router.get('/:idJuego', obtenerJuego);
 router.patch('/:idJuego', actualizarJuego);
 router.delete('/:idJuego', eliminarJuego);
 router.post('/', buscarJuegos);
-router.get('/:filtro', filtrarJuegos);
+router.get('/:categoria/:filtro', filtrarJuegos);
 
 module.exports = router;

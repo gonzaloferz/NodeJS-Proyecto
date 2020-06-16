@@ -7,8 +7,7 @@ module.exports = {
     obtenerJuegos: async (req, res, next) => {
         const juegos = await Tienda.find({});
         //res.status(200).json(juegos);
-        //res.render('tienda.html');
-        return juegos;
+        res.render('tienda.html', {juegos});
     },
 
     //POST: Agregamos un nuevo juego
@@ -71,17 +70,22 @@ module.exports = {
     },
 
     filtrarJuegos: async (req, res, next) => {
-        const { plataforma }= req.query;
-        //const juegos = await Tienda.find({Plataforma: plataforma});
+        const categoria = req.params.categoria;
+        const filtro = req.params.filtro;
+        let juegos = [];
 
-        console.log(plataforma);
+        if (categoria == "genero") {
+            juegos = await Tienda.find({"Genero": {$regex: filtro, $options:"i"}});
+        } else if (categoria == "plataforma") {
+            juegos = await Tienda.find({"Plataforma": {$regex: filtro, $options:"i"}});
+        }
 
-/*         if (!juegos) {
+        if (juegos.length == 0) {
             req.flash('error_msg', 'No se encontraron resultados');
             res.render('tienda.html');
         } else {
-            res.render('tienda.html',{juegos});
-        } */
+            res.render('tienda.html', {juegos});
+        }
     },
  
 };

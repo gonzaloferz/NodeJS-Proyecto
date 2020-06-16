@@ -19,15 +19,10 @@ router.post('/', async (req, res) => {
     if (errors.length > 0){
         res.render('login.html', {errors, email, contrasenia});
     } else {
-
-        //req.flash('usuario', usuario);
-        
         req.flash('success_msg', 'Usuario logueado con exito!');
+        req.session.email = email;
         res.redirect('/mensajes');
-        
-        //setTimeout("/index", 2000);
     }
-    
 
 });
 
