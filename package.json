@@ -1,6 +1,6 @@
 {
   "title": "Mi AppWeb",
-  "name": "startbootstrap-heroic-features",
+  "name": "proyectoweb",
   "version": "4.2.0",
   "scripts": {
     "start": "node src",
@@ -31,5 +31,14 @@
     "merge-stream": "2.0.0",
     "nodemon": "^2.0.4"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "description": "NodeJS-Proyecto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzaloferz/NodeJS-Proyecto.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gonzaloferz/NodeJS-Proyecto/issues"
+  },
+  "homepage": "https://github.com/gonzaloferz/NodeJS-Proyecto#readme"
 }
